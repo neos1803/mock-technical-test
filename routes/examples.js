@@ -7,4 +7,4 @@ router
   .get('/', ExampleController.index);
 
 
-module.exports = router;
+// module.exports = router;
