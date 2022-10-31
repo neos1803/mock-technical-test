@@ -88,11 +88,15 @@ class controllers {
    */
   static async update(req, res) {
     const id = req.params.id;
-    const {name, type} = req.body
+    let {name, type} = req.body
+    console.log(name);
+    console.log(type);
 
     const index = books.findIndex((i) => i.id === Number(id));
-    console.log(index);
-
+    if (name === undefined) name = books[index].name
+    if (type === undefined) type = books[index].type
+     
+    console.log(name);
     if (index !== -1) {
       books[index] = {
         ...books[index],
