@@ -89,8 +89,6 @@ class controllers {
   static async update(req, res) {
     const id = req.params.id;
     let {name, type} = req.body
-    console.log(name);
-    console.log(type);
 
     const index = books.findIndex((i) => i.id === Number(id));
     if (name === undefined) name = books[index].name
