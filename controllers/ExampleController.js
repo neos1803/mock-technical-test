@@ -12,4 +12,4 @@ class ExampleController {
 
 }
 
-module.exports = ExampleController;
+// module.exports = ExampleController;
