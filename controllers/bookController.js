@@ -42,9 +42,8 @@ class bookController {
         const book = books.findIndex((i) => i.id === Number(id));
     
         if (book) {
-          name = req.body.name
+          name = req.body.name,
           type = req.body.type
-          };
           return res.status(200).json({
             message: 'Success Update Book',
             data: books
