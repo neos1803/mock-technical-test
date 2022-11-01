@@ -74,8 +74,8 @@ async function update(req, res, next) {
         const filterId = books.findIndex(book => book.id === id);
         const book = {
             'id': id,
-            'name': payload.name,
-            'type': payload.type,
+            'name': payload.name ?? books[filterId].name,
+            'type': payload.type ?? books[filterId].type,
         };
 
         books[filterId] = book;
