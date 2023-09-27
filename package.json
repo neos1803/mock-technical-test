@@ -12,5 +12,9 @@
   "scripts": {
     "start": "node index.js",
     "test": "node ./models/data.js"
+  },
+  "devDependencies": {
+    "eslint": ">=5.16.0",
+    "eslint-config-google": "^0.14.0"
   }
 }
