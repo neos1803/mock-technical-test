@@ -20,9 +20,7 @@ class BooksController {
 
     static async getBookByType(req, res) {
         const {jenis} = req.params
-        console.log(id);
-        const book = books.find(({id}) => id == id)
-        console.log(book);
+        const book = books.filter(({type}) => type.toLowerCase() == jenis.toLowerCase())
         return res.status(200).json({
             message: "Success",
             data: book
