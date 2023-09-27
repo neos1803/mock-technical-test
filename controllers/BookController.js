@@ -40,6 +40,31 @@ class BooksController {
             data: books
         })
     }
+
+    static async editBookById(req, res) {
+        const bookId = req.params.id
+        const theBook = books.findIndex(({id}) => id == bookId)
+        const {name, type} = req.body
+        books[theBook] = {
+            ...books[theBook],
+            name,
+            type
+        }
+        return res.status(200).json({
+            message: "Success",
+            data: books
+        })
+    }
+
+    static async deleteBookById(req, res) {
+        const bookId = req.params.id
+        const book = books.findIndex(({id}) => id == bookId)
+        books.splice(book, 1)
+        return res.status(200).json({
+            message: "Success",
+            data: books
+        })
+    }
   
   }
   
