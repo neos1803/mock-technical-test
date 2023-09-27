@@ -10,6 +10,7 @@
     "express": "^4.18.1"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "node ./models/data.js"
   }
 }
