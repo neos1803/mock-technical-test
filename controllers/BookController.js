@@ -26,6 +26,20 @@ class BooksController {
             data: book
         })
     }
+
+    static async addBook(req, res) {
+        const {name, type} = req.body
+        const book = {
+            id: books.length + 1,
+            name,
+            type,
+        }
+        books.push(book)
+        return res.status(200).json({
+            message: "Success",
+            data: books
+        })
+    }
   
   }
   

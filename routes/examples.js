@@ -8,6 +8,7 @@ router.get('/', ExampleController.index);
 router.get('/books', BooksController.getAllBooks)
 router.get('/books/:id', BooksController.getBookById)
 router.get('/books/jenis/:jenis', BooksController.getBookByType)
+router.post('/books', BooksController.addBook)
 
 
 module.exports = router;
