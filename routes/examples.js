@@ -6,7 +6,7 @@ const BooksController = require('../controllers/BookController');
 
 router.get('/', ExampleController.index);
 router.get('/books', BooksController.getAllBooks)
-router.get('/books/:bookId', BooksController.getBookById)
+router.get('/books/:id', BooksController.getBookById)
 
 
 module.exports = router;

@@ -10,7 +10,16 @@ class BooksController {
     }
 
     static async getBookById(req, res) {
-        const {id} = req.params
+        const bookId = req.params.id
+        const book = books.find(({id}) => id == bookId)
+        return res.status(200).json({
+            message: "Success",
+            data: book
+        })
+    }
+
+    static async getBookByType(req, res) {
+        const {jenis} = req.params
         console.log(id);
         const book = books.find(({id}) => id == id)
         console.log(book);
