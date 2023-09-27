@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/neos1803/mock-technical-test.git",
-  "author": "Purba <nanda@ecampus.ut.ac.id>",
+  "author": "Vikhrama SPJ <tempestdragon987@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "dotenv": "^16.0.2",

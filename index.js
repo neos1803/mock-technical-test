@@ -11,15 +11,15 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 // Use your route here
-app.use("/api/v1/example", exampleRoute);
+app.use(exampleRoute);
 
-app.get('/', (req, res) => {
-  res.json('Okay')
-});
+// app.get('/', (req, res) => {
+//   res.json('Okay lahhhhhhh')
+// });
 
 app.listen(
   port,
   () => {
-    console.log("Running on port " + port)
+    console.log(`Running on http://localhost:${port}`)
   }
 );
